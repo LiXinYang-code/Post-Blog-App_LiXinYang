@@ -42,6 +42,7 @@ public class SetupActivity extends AppCompatActivity {
     private FirebaseAuth  firebaseAuth;
     private FirebaseFirestore firebaseFirestore;
 
+    public static String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +65,12 @@ public class SetupActivity extends AppCompatActivity {
         setupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                /**
+                 * save userName for sending to accoutFra:
+                 */
+                userName = setupName.getText().toString();
+
 
                 String user_name = setupName.getText().toString();
 

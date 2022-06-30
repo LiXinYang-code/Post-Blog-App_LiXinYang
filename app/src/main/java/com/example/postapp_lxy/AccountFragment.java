@@ -80,6 +80,37 @@ public class AccountFragment extends Fragment {
             }
         });
 
+        myFansBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent myfansIntent = new Intent(getActivity(),MyFans.class);
+                startActivity(myfansIntent);
+
+            }
+        });
+
+        myFollowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent myfollowIntent = new Intent(getActivity(),myFollow.class);
+                startActivity(myfollowIntent);
+
+            }
+        });
+
+        myReplyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent myReply = new Intent(getActivity(),MyReply.class);
+                startActivity(myReply);
+
+            }
+        });
+
+
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.example.postapp_lxy;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 
@@ -27,9 +28,10 @@ public class HomeFragment extends Fragment {
     private ImageView blogLikeImage;
     private int postLikeAccount=0;
     private TextView blogLikeCount;
-
-
     private TextView blogDescView;
+
+    private  Button blogAddComment;
+
 
 
     @Override
@@ -71,6 +73,20 @@ public class HomeFragment extends Fragment {
                 postLikeAccount++;
                 String postLikeFinalAccout = String.valueOf(postLikeAccount);
                 blogLikeCount.setText(postLikeFinalAccout + "  "+"likes");
+
+            }
+        });
+
+        /**
+         * add comments
+         */
+        blogAddComment=(Button) getActivity().findViewById(R.id.blog_add_comments);
+        blogAddComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent newComment = new Intent(getActivity(),CommentsActivity.class);
+                startActivity(newComment);
 
             }
         });

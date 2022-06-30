@@ -8,8 +8,12 @@
         <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/activity_comments.xml" value="0.2" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/activity_my_fans.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/activity_my_follow.xml" value="0.259375" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/activity_my_reply.xml" value="0.259375" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/activity_new_post.xml" value="0.2" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/activity_reply_content.xml" value="0.259375" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/activity_setup.xml" value="0.264" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/blog_list_item.xml" value="0.24210526315789474" />
         <entry key="..\:/Users/DELL/AndroidStudioProjects/PostApp_lxy/app/src/main/res/layout/fragment_account.xml" value="0.24954710144927536" />

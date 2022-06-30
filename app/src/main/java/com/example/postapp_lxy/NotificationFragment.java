@@ -106,7 +106,7 @@ public class NotificationFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Intent sendToReply = new Intent(getActivity(),MainActivity.class);
+                Intent sendToReply = new Intent(getActivity(),ReplyContent.class);
                 startActivity(sendToReply);
 
 
@@ -117,7 +117,7 @@ public class NotificationFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Intent sendToReply = new Intent(getActivity(),MainActivity.class);
+                Intent sendToReply = new Intent(getActivity(),ReplyContent.class);
                 startActivity(sendToReply);
 
 
@@ -128,7 +128,7 @@ public class NotificationFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Intent sendToReply = new Intent(getActivity(),MainActivity.class);
+                Intent sendToReply = new Intent(getActivity(),ReplyContent.class);
                 startActivity(sendToReply);
 
 
@@ -139,7 +139,7 @@ public class NotificationFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Intent sendToReply = new Intent(getActivity(),MainActivity.class);
+                Intent sendToReply = new Intent(getActivity(),ReplyContent.class);
                 startActivity(sendToReply);
 
 
