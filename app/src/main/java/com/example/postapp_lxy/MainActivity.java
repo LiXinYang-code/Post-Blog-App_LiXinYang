@@ -123,18 +123,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /**
-         * simplyfy the Add Comments:
-         */
-        addComment = findViewById(R.id.Add_Comments_image);
-        addComment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                sendToComments();
-
-            }
-        });
 
 
     }

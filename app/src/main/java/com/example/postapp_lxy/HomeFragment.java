@@ -32,6 +32,7 @@ public class HomeFragment extends Fragment {
 
     private  Button blogAddComment;
 
+    private  TextView followText;
 
 
     @Override
@@ -91,6 +92,22 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        /**
+         * follow the user
+         */
+        followText =(TextView) getActivity().findViewById(R.id.follow_text);
+        followText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //change the content of follow textVie
+                followText.setText("Followed");
+
+                //go to My Follow activity
+                Intent sendMyFollow = new Intent(getActivity(),myFollow.class);
+                startActivity(sendMyFollow);
+            }
+        });
 
     }
 

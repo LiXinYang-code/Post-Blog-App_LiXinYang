@@ -7,14 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/Add_Comments_image"
-        android:layout_width="61dp"
-        android:layout_height="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/mainBottomNav"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/presence_audio_online" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_post_btn"
         android:layout_width="wrap_content"
