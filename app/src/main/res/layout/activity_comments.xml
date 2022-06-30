@@ -7,37 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".CommentsActivity">
 
-  <androidx.recyclerview.widget.RecyclerView
-      android:id="@+id/comment_list"
-      android:layout_width="359dp"
-      android:layout_height="474dp"
-      android:layout_marginStart="16dp"
-      android:layout_marginTop="16dp"
-      android:layout_marginEnd="16dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="1.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
   <ImageView
       android:id="@+id/comment_post_btn"
       android:layout_width="74dp"
       android:layout_height="61dp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/comment_list"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
       app:srcCompat="@android:drawable/ic_input_add" />
 
   <EditText
       android:id="@+id/comment_field"
-      android:layout_width="244dp"
-      android:layout_height="72dp"
+      android:layout_width="404dp"
+      android:layout_height="388dp"
+      android:layout_marginTop="60dp"
       android:ems="10"
-      android:inputType="textPersonName"
-      android:text="Name"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toStartOf="@+id/comment_post_btn"
+      android:hint="please write your comments here"
+      android:inputType="textMultiLine|textPersonName"
+      android:textAlignment="center"
+      app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/comment_list" />
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <Button
+      android:id="@+id/comment_finish_btn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Finish"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/comment_field" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

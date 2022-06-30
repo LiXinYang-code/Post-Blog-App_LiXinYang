@@ -1,5 +1,6 @@
 package com.example.postapp_lxy;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +17,14 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class AccountFragment extends Fragment {
+
+    private ImageView myFansBtn;
+    private ImageView myFollowBtn;
+    private ImageView myReplyBtn;
+    private ImageView AccountSetBtn;
+
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,6 +55,31 @@ public class AccountFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        /**
+         * initialize the components of account settings
+         */
+        myFansBtn = (ImageView) getActivity().findViewById(R.id.my_fans_btn);
+        myFollowBtn = (ImageView) getActivity().findViewById(R.id.my_follow_btn);
+        myReplyBtn = (ImageView) getActivity().findViewById(R.id.my_reply_btn);
+        AccountSetBtn = (ImageView) getActivity().findViewById(R.id.account_settings_btn);
+
+
+        AccountSetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent SetUpIntent = new Intent(getActivity(),SetupActivity.class);
+                startActivity(SetUpIntent);
+
+            }
+        });
+
     }
 
     @Override

@@ -20,4 +20,12 @@
     <string name="bottom_ac_text">Account</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    //parse server connect settings:
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">y4ffRo7hbkw5L17RTjBdSd4u1usBEHLzJZ4RCeht</string>
+    <string name="back4app_client_key">8ppJ0bbrGGsevSu3iVy3uJ4tIwDx6tsF3INyCIww</string>
+    <string name="reply_btn">REPLY</string>
+
 </resources>

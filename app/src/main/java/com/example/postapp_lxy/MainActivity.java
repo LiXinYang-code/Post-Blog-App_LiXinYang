@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,11 +33,16 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.w3c.dom.Text;
 
+//parse server initialize
+import com.parse.Parse;
+import com.parse.ParseObject;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FloatingActionButton addPostBtn;
+    private ImageView addComment;
     private String currentUser_id;
 
     private FirebaseFirestore firebaseFirestore;
@@ -47,11 +53,6 @@ public class MainActivity extends AppCompatActivity {
     private NotificationFragment notificationFragment;
     private AccountFragment accountFragment;
 
-    /**
-    //new changed +++
-    private ImageView blogLikeBtn;
-    private TextView blogLikeCt;
-    */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,30 +72,17 @@ public class MainActivity extends AppCompatActivity {
         notificationFragment = new NotificationFragment();
         accountFragment = new AccountFragment();
 
-
-/**
-        //blog like check
-        //add like
-        blogLikeCt = findViewById(R.id.blog_like_count);
-         blogLikeBtn = findViewById(R.id.blog_like_btn);
-         blogLikeBtn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-
-        blogLikeCount.AddLikeCount();
-
-        }
-
+        //test the parse connection:
+        ParseObject firstObject = new  ParseObject("FirstClass");
+        firstObject.put("message","Hey ! First message from android. Parse is now connected");
+        firstObject.saveInBackground(e -> {
+            if (e != null){
+                Log.e("MainActivity", e.getLocalizedMessage());
+            }else{
+                Log.d("MainActivity","Object saved.");
+            }
         });
-         //count like
-        if (blogLikeCount.getLikeCount()>0){
 
-            blogLikeCt = findViewById(R.id.blog_like_count);
-            blogLikeCt.setText(blogLikeCount.getLikeCount()+"Likes");
-
-        }
-
-*/
 
         //new changed--
       //  relpaceFragment(homeFragment);
@@ -134,7 +122,22 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        }
+
+        /**
+         * simplyfy the Add Comments:
+         */
+        addComment = findViewById(R.id.Add_Comments_image);
+        addComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                sendToComments();
+
+            }
+        });
+
+
+    }
 
 
     @Override
@@ -261,6 +264,13 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.main_container,fragment);
         fragmentTransaction.commit();
 
+
+    }
+
+    private  void sendToComments(){
+
+        Intent newComment = new Intent(MainActivity.this,CommentsActivity.class);
+        startActivity(newComment);
 
     }
 

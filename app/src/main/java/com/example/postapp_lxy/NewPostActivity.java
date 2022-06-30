@@ -30,7 +30,10 @@ public class NewPostActivity extends AppCompatActivity {
 
     private static final int MAX_LENGTH = 100;
     private ImageView newPostImage;
+
     private EditText  newPostDesc;
+    public static String postDesc;
+
     private Button newPostBtn;
 
     private ProgressBar newPostProgress;
@@ -57,6 +60,7 @@ public class NewPostActivity extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference();
         firebaseFirestore = FirebaseFirestore.getInstance();
 
+
         newPostImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,6 +73,11 @@ public class NewPostActivity extends AppCompatActivity {
         newPostBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                /**
+                 * save the description for sending to HomeFragment
+                 */
+                postDesc = newPostDesc.getText().toString();
 
 
                 String desc = newPostDesc.getText().toString();
